@@ -1,0 +1,161 @@
+<! doctype html>
+<script>
+
+function configure2()
+{
+		nn1=document.getElementById("nn").value;
+		jt1=document.getElementById("jt").value;
+		client1=document.getElementById("client").value;
+		url="http://192.168.1.28/cgi-bin/custominstall.py?nn=" + nn1 + "&jt=" + jt1 + "client=" + client1;
+		id="main";
+		xh=new XMLHttpRequest();
+		xh.open("GET", url, true);
+		xh.send();
+		
+		function data()
+		{
+			if(xh.readyState==4)
+				{
+				data=xh.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xh.onreadystatechange=data;
+}
+
+
+	function configure()
+	{
+
+		window.location.href="http://192.168.1.28/configure1.html";
+	}
+
+
+</script>
+
+<style>
+	div.top{
+	position:absolute;
+	background:url("bg4.jpg");
+	width:100%;
+	height:30px;
+	left:0;
+	top:0;
+	}
+	div.main{
+	position:absolute;
+	top:30px;
+	left:10%;
+	width:80%;
+	height:94%;
+	text-align:center;
+	}
+	
+	table{
+	position:absolute;
+
+	}
+
+	td:hover
+	{
+	
+	text-decoration: underline;
+	color: blue;
+	width:12%;
+	height:102px;
+	box-shadow: 10px 10px 10px grey;
+	}
+	h1{
+		text-align:center;
+	}
+	
+
+	table,th,td{
+	border:3px groove white;
+	border-collapse:collapse;
+	color:white;
+	background:#2F363E;
+	width:10%;
+	height:95px;
+	text-align:center;
+	cellspacing:2px;
+	cellpadding:1px;
+	cursor:pointer;
+	}
+	td{
+	font-size:16px;
+
+	}
+	table#menuleft{
+	top:30px;
+	left:0%;
+	}
+	table#menuright{
+	top:30px;
+	left:90%;
+	}
+	td#jt1{
+	visibility:hidden;
+	}
+	
+	
+</style>
+<body>
+<div class='top'>
+</div>
+
+<!--Left hand side menu-->
+
+<table id="menuleft">
+<tr>
+<td id='home' onmouseup="home()">Home</td>
+</tr>
+<tr>
+<td id='configure' onmouseup="configure()">Configure</td>
+</tr>
+<tr>
+<td id='tt' onmouseup="tasktrackers()">tasktrackers</td>
+</tr>
+<tr>
+<td id='data' onmouseup="datanodes()">Datanodes</td>
+</tr>
+<tr>
+<td id='list' onclick="listfiles()">List Files</td>
+</tr>
+<tr>
+<td id='upload' onclick="upload1()">Upload file</td>
+</tr>
+</table>
+
+<!--Right hand side menu -->
+
+<table id="menuright">
+<tr>
+<td id='snn' onclick="snn()">Secondary NN</td>
+</tr>
+<tr>
+<td id='frameworks' onclick="frameworks()">Frameworks</td>
+</tr>
+<tr>
+<td id='read' onclick="read()">Read file</td>
+</tr>
+<tr>
+<td id='scan' onclick="scan()">Scan IP's on network</td>
+</tr>
+<tr>
+<td id='job' onclick="job()">Run Job</td>
+</tr>
+<tr>
+<td id='archive' onclick="archive()">Create Archives</td>
+</tr>
+</table>
+
+<div id="main" class="main">
+<h1>Configure</h1>
+<form>
+Enter the IP of Namenode: <input type="text"  name="nn"/><br /> <br />
+Enter the IP of Jobtracker: <input type="text"  name="jt"/><br /> <br />
+Enter the IP of Client: <input type="text"  name="client"/><br /> <br />
+<input type="button" onclick="configure2()" value="submit" id="csubmit">
+</form>
+</div>

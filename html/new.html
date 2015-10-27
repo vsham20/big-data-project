@@ -1,0 +1,286 @@
+<!doctype html>
+
+<html>
+<script>
+	var i=0;
+
+	function home()
+	{	url="http://192.168.1.28/home1.html";
+		id="main";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+	}
+	
+	function configure()
+	{
+
+		window.location.href="http://192.168.1.28/configure1.html";
+	}
+
+
+	function upload()
+	{	
+		window.location.href="http://192.168.1.28/upload1.html"
+		
+	
+	}
+
+	function job()
+	{
+		url="http://192.168.1.28/job1.html";
+		id="main";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+	
+	}
+
+	function read()
+	{
+		url="http://192.168.1.28/cgi-bin/read1.py";
+		id="main";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+		
+	}	
+
+	function tasktrackers()
+	{
+		url="http://192.168.1.28/cgi-bin/tt1.py";
+		id="main";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+		
+
+
+	}
+
+	function listfiles()
+	{
+		url="http://192.168.1.28/cgi-bin/list_files.py";
+		id="main";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+
+
+	}
+
+
+	function datanodes()
+	{
+
+		url="http://192.168.1.28/cgi-bin/datanodeshow.py";
+		id="main";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+
+	}
+
+	function archive()
+	{
+		window.location.href="http://192.168.1.28/archive.html"
+
+	}	
+
+</script>
+
+<style>
+	div.top{
+	position:absolute;
+	background:url("bg4.jpg");
+	width:100%;
+	height:30px;
+	left:0;
+	top:0;
+	}
+	div.main{
+	position:absolute;
+	
+	top:30px;
+	left:10%;
+	width:80%;
+	height:94%;
+	text-align:center;
+	}
+	
+	table{
+	position:absolute;
+
+	}
+
+	td:hover
+	{
+	
+	text-decoration: underline;
+	color: blue;
+	width:12%;
+	height:102px;
+	box-shadow: 10px 10px 10px grey;
+	}
+	h1{
+		text-align:center;
+	}
+	
+
+	table,th,td{
+	border:3px groove white;
+	border-collapse:collapse;
+	color:white;
+	background:#2F363E;
+	width:10%;
+	height:95px;
+	text-align:center;
+	cellspacing:2px;
+	cellpadding:1px;
+	cursor:pointer;
+	}
+	td{
+	font-size:16px;
+
+	}
+	table#menuleft{
+	top:30px;
+	left:0%;
+	}
+	table#menuright{
+	top:30px;
+	left:90%;
+	}
+	td#jt1{
+	visibility:hidden;
+	}
+	
+	
+</style>
+<body onload="home()">
+<div class='top'>
+</div>
+
+<!--Left hand side menu-->
+
+<table id="menuleft">
+<tr>
+<td id='home' onmouseup="home()">Home</td>
+</tr>
+<tr>
+<td id='configure' onmouseup="configure()">Configure</td>
+</tr>
+<tr>
+<td id='tt' onmouseup="tasktrackers()">tasktrackers</td>
+</tr>
+<tr>
+<td id='data' onmouseup="datanodes()">Datanodes</td>
+</tr>
+<tr>
+<td id='list' onclick="listfiles()">List Files</td>
+</tr>
+<tr>
+<td id='upload' onclick="upload()">Upload file</td>
+</tr>
+</table>
+
+<!--Right hand side menu -->
+
+<table id="menuright">
+<tr>
+<td id='snn' onclick="snn()">Secondary NN</td>
+</tr>
+<tr>
+<td id='frameworks' onclick="frameworks()">Frameworks</td>
+</tr>
+<tr>
+<td id='read' onclick="read()">Read file</td>
+</tr>
+<tr>
+<td id='data' onclick="datanodes()">High availability</td>
+</tr>
+<tr>
+<td id='job' onclick="job()">Run Job</td>
+</tr>
+<tr>
+<td id='archive' onclick="archive()">Create Archives</td>
+</tr>
+</table>
+
+
+
+<div id="main" class='main'>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

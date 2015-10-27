@@ -1,0 +1,457 @@
+<!doctype html>
+
+<html>
+<script>
+	var i=0;
+
+	function home()
+	{
+		x=document.getElementById("home1");
+		y=document.getElementById("configure1");
+		z=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("list1");
+		d=document.getElementById("tt1");
+		e=document.getElementById("data1");
+		f=document.getElementById("snn1");
+		x.style.visibility="visible";
+		y.style.visibility="hidden";
+		z.style.visibility="hidden";
+		a.style.visibility="hidden";
+		b.style.visibility="hidden";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		e.style.visibility="hidden";
+		f.style.visibility="visible";
+	}
+	function configure()
+	{
+		x=document.getElementById("home1");
+		z=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("list1");
+		d=document.getElementById("tt1");
+		e=document.getElementById("data1");
+		f=document.getElementById("configure1");
+		g=document.getElementById("snn1");
+		x.style.visibility="hidden";
+		z.style.visibility="hidden";
+		a.style.visibility="hidden";
+		b.style.visibility="hidden";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		e.style.visibility="hidden";
+		f.style.visibility="visible";
+		g.style.visibility="hidden";
+		url="http://192.168.1.28/cgi-bin/typicalmain.py";
+		id="configure1"
+		xhr=new XMLHttpRequest();
+		xhr.open("GET",url , true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+	}
+
+
+	function upload()
+	{
+		x=document.getElementById("home1");
+		z=document.getElementById("configure1");
+		y=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("list1");
+		d=document.getElementById("tt1");
+		e=document.getElementById("data1");
+		f=document.getElementById("snn1");
+		x.style.visibility="hidden";
+		y.style.visibility="visible";
+		z.style.visibility="hidden";
+		a.style.visibility="hidden";
+		b.style.visibility="hidden";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		e.style.visibility="hidden";
+		f.style.visibility="visible";
+		window.location.href="http://192.168.1.28/upload1.html";
+	}
+
+	function job()
+	{
+		x=document.getElementById("home1");
+		y=document.getElementById("configure1");
+		z=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("list1");
+		d=document.getElementById("tt1");
+		e=document.getElementById("data1");
+		f=document.getElementById("snn1");
+		x.style.visibility="hidden";
+		y.style.visibility="hidden";
+		z.style.visibility="hidden";
+		a.style.visibility="visible";
+		b.style.visibility="hidden";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		e.style.visibility="hidden";
+		f.style.visibility="visible";
+		window.location.href="http://192.168.1.28/readfile.html";
+	}
+
+	function read()
+	{
+		x=document.getElementById("home1");
+		y=document.getElementById("configure1");
+		z=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("list1");
+		d=document.getElementById("tt1");
+		e=document.getElementById("data1");
+		f=document.getElementById("snn1");
+		x.style.visibility="hidden";
+		y.style.visibility="hidden";
+		z.style.visibility="hidden";
+		a.style.visibility="hidden";
+		b.style.visibility="visible";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		e.style.visibility="hidden";
+		f.style.visibility="visible";
+	}	
+
+	function tasktrackers()
+	{
+		x=document.getElementById("home1");
+		y=document.getElementById("configure1");
+		z=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("list1");
+		d=document.getElementById("data1");
+		f=document.getElementById("snn1");
+		x.style.visibility="hidden";
+		y.style.visibility="hidden";
+		z.style.visibility="hidden";
+		a.style.visibility="hidden";
+		b.style.visibility="hidden";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		f.style.visibility="visible";
+		xhtt=new XMLHttpRequest();
+		xhtt.open("GET", "http://192.168.1.28/cgi-bin/tasktrackers.py", true);
+		xhtt.send();
+		
+		function data()
+		{
+			if(xhtt.readyState==4)
+				{
+				data=xhtt.responseText;
+				document.getElementById("tt1").innerHTML=data;
+				}
+		}
+	xhtt.onreadystatechange=data;
+
+
+
+	}
+	
+	function listfiles()
+	{
+
+		x=document.getElementById("home1");
+		y=document.getElementById("configure1");
+		z=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("tt1");
+		d=document.getElementById("data1");
+		e=document.getElementById("list1");
+		f=document.getElementById("snn1");
+		x.style.visibility="hidden";
+		y.style.visibility="hidden";
+		z.style.visibility="hidden";
+		a.style.visibility="hidden";
+		b.style.visibility="hidden";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		e.style.visibility="visible";
+		f.style.visibility="visible";		
+		url="http://192.168.1.28/cgi-bin/list_files.py";
+		id="list1";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+
+
+	}
+
+	function datanodes()
+	{
+		x=document.getElementById("home1");
+		y=document.getElementById("configure1");
+		z=document.getElementById("upload1");
+		a=document.getElementById("job1");
+		b=document.getElementById("read1");
+		c=document.getElementById("tt1");
+		d=document.getElementById("list1");
+		e=document.getElementById("data1");
+		f=document.getElementById("snn1");
+		x.style.visibility="hidden";
+		y.style.visibility="hidden";
+		z.style.visibility="hidden";
+		a.style.visibility="hidden";
+		b.style.visibility="hidden";
+		c.style.visibility="hidden";
+		d.style.visibility="hidden";
+		e.style.visibility="visible";
+		f.style.visibility="visible";
+		url="http://192.168.1.28/cgi-bin/datanodeshow.py";
+		id="data1";
+		xhr=new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.send();
+	
+		function data()
+		{	
+			if(xhr.readyState==4)
+				{
+				data=xhr.responseText;
+				document.getElementById(id).innerHTML=data;
+				}
+		}
+	xhr.onreadystatechange=data;
+
+	}
+
+	function snn()
+	{	
+		window.location.href="http://192.168.1.28/snn2.html"
+
+	}	
+
+
+
+
+</script>
+
+<style>
+
+	iframe{
+
+	position:absolute;
+	border:2px groove white;
+	top:0px;
+	left:0;
+	width:100%;
+	height:100%;
+
+	}
+	div.top{
+	position:absolute;
+	background:url("bg4.jpg");
+	width:100%;
+	height:30px;
+	left:0;
+	top:0;
+	}
+	
+	table{
+	position:absolute;
+
+	}
+
+	td:hover
+	{
+	
+	text-decoration: underline;
+	color: blue;
+	width:12%;
+	height:102px;
+	box-shadow: 10px 10px 10px grey;
+	}
+	h1{
+		text-align:center;
+	}
+	div.main{
+	position:absolute;
+	border:2px groove white;
+	top:30px;
+	left:10%;
+	width:80%;
+	height:94%;
+	text-align:center;
+	}
+
+	table,th,td{
+	border:3px groove white;
+	border-collapse:collapse;
+	color:white;
+	background:#2F363E;
+	width:10%;
+	height:95px;
+	text-align:center;
+	cellspacing:2px;
+	cellpadding:1px;
+	cursor:pointer;
+	}
+	td{
+	font-size:16px;
+
+	}
+	table#menuleft{
+	top:30px;
+	left:0%;
+	}
+	table#menuright{
+	top:30px;
+	left:90%;
+	}
+	
+	
+	
+</style>
+<body onload="home()">
+<div class='top'>
+</div>
+
+<!--Left hand side menu-->
+
+<table id="menuleft">
+<tr>
+<td id='home' onclick="home()">Home</td>
+</tr>
+<tr>
+<td id='configure' onclick="configure()">Configure</td>
+</tr>
+<tr>
+<td id='tt' onclick="tasktrackers()">Tasktrackers</td>
+</tr>
+<tr>
+<td id='data' onclick="datanodes()">Datanodes</td>
+</tr>
+<tr>
+<td id='list' onclick="listfiles()">List Files</td>
+</tr>
+<tr>
+<td id='upload' onclick="upload()">Upload file</td>
+</tr>
+
+</table>
+
+<!--Right hand side menu -->
+
+<table id="menuright">
+<tr>
+<td id='snn' onclick="snn()">Secondary NN</td>
+</tr>
+<tr>
+<td id='frameworks' onclick="frameworks()">Frameworks</td>
+</tr>
+<tr>
+<td id='read' onclick="read()">Read file</td>
+</tr>
+<tr>
+<td id='scan' onclick="scan()">Scan IP's on network</td>
+</tr>
+<tr>
+<td id='job' onclick="job()">Run Job</td>
+</tr>
+<tr>
+<td id='archive' onclick="archive()">Create Archives</td>
+</tr>
+</table>
+
+
+<!-- section for Listing active Jobtrackers -->
+
+<div id="tt1" class='main'>
+
+</div>
+
+<!-- section for showing active datanodes -->
+
+<div id="data1" class='main'>
+Wait while listing the datanodes...
+</div>
+
+<!-- section for listing directory contents -->
+
+<div id="list1" class='main'>
+Wait for a moment while we list the data on cluster...
+</div>
+
+
+
+<!--Home section div-->
+
+<div id="home1" class='main' >
+<h1>Home</h1>
+Hello User welcome to Olive.
+</div>
+
+<!-- Configure Section div-->
+
+<div id="configure1" class='main'>
+Configuring the cluster...
+</div>
+
+
+
+<!-- section for upload file-->
+
+<div id="upload1" class='main'>
+<h1>Upload a File</h1>
+<form>
+Enter the path of the file: <input id="pof" /><br /><br />
+<input type="button" value="submit" id="pofsubmit" />
+</form>
+</div>
+
+<!-- section for job run -->
+
+<div id="job1" class='main'>
+<h1>Run a Job</h1>
+<pre>
+Enter the file to run the job on: <input id="file" /><br />
+         Type of job: <select name="toj">
+<option value='1'>------<option>
+<option value='2'>word count</option>
+</select><br /><br />
+<input type="button" value="submit" id='tojsubmit' />
+</pre>
+</div>
+
+<!-- section for Reading a file -->
+
+<div id="read1" class="main">
+<h1>Read Contents From a File</h1>
+Enter file name<input type="text" id="rff" /><br /><br />
+<input type="button" value="submit" id="rffsubmit">
+</div>
+
+
+
+</body>
+</html>

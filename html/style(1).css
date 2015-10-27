@@ -1,0 +1,178 @@
+h1 span{
+  color:#2fa68e;
+}
+h1{
+font-size:50px;
+text-transform:UPPERCASE;
+}
+
+
+
+div.d1{
+font-family: "Arial", Arial, snas-serif;
+position:absolute;
+border-collapse: collapse;
+cell-padding:0;
+cell-spacing:0;
+border-spacing: 0;
+width:100%;
+left: 0;
+top: 0;
+background:url("start-page.jpg")0px 0px fixed;
+height:580px;
+
+}
+
+div.d1 .opacity{
+position:absolute;
+width:100%;
+height:580px;
+background:rgba(0,0,0,0.7);
+}
+
+div.d1 .content{
+position:relative;
+width:900px;
+margin:0 auto;
+height:580px
+}
+div.d1 .content .text{
+position:absolute;
+text-align:center;
+color:white;
+margin:auto;
+top:0;
+left:0;
+bottom:0;
+right:0;
+width:500px;
+height:320px;
+}
+
+div.d3{
+
+background:#2F363E;
+position:absolute;
+left:0;
+top:580px;
+width:100%;
+height:400px;
+}
+
+div.logo{
+font-family: "Arial", Arial, snas-serif;
+color:white;
+font-size:45px;
+font-weight:bold;
+text-align:center;
+text-transform:UPPERCASE;
+}
+
+div.d2{
+position:absolute;
+left:0;
+background:url("partners.jpg") 0px 0px fixed ;
+top:980px;
+width:100%;
+border:none;
+padding:0px;
+height:400px;
+}
+div.d2 .opacity{
+position:absolute;
+width:100%;
+height:400px;
+background:rgba(0,0,0,0.8);
+}
+
+p.quote{
+color:white;
+font-size:25px;
+text-align:center;
+font-weight:bold;
+font-style:italic;
+}
+p.author{
+color:white;
+font-size:25px;
+text-align:center;
+font-style:italic;
+}
+div.d4{
+position:absolute;
+top:1380px;
+width:100%;
+height:400px;
+}
+div.d41{
+position:absolute;
+border:1px solid black;
+border-radius: 50px;
+}
+div.d42{
+position:absolute;
+border:1px solid black;
+border-radius: 50px;
+float: right;
+}
+div.loginbutton{
+  width:183px;
+  height:47px;
+  margin:50px auto;
+  line-height:47px;
+  border:1px solid white;
+  border-radius:10px;
+  text-transform:uppercase;
+  color:white;
+  cursor:pointer;
+  font-size:19px;
+  background:none;
+}
+
+div.loginbutton:hover{
+background:white;
+color:black;
+}
+
+div.login{
+position:absolute;
+font-family: "Verdana", Verdana, sans-serif;
+width:250px;
+border:5px solid black;
+border-radius:15px;
+left:40%;
+height:300px;
+text-align:center;
+}
+
+div.loginback{
+top:0;
+left:0;
+position:fixed;
+background:url('start-page.jpg');
+width:100%;
+height:100%;
+}
+
+div.loginback .opacity{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+
+}
+input{
+position:relative;
+border-radius:20px;
+width:190px;
+text-align:center;
+}
+input.sub{
+position:relative;
+border-radius:20px;
+width:120px;
+height:5px:
+text-align:center;
+}
+
+

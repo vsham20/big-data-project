@@ -1,0 +1,107 @@
+<! doctype HTML>
+<html>
+
+
+<script>
+function typical()
+	{
+		
+		window.location.href="http://192.168.1.28/menut.html";
+
+	}
+
+function custom()
+	{
+		window.location.href="http://192.168.1.28/menu.html";
+		
+
+	}
+
+
+
+
+</script>
+
+
+<style>
+div.back{
+position:absolute;
+top:0;
+left:0;
+background:url('partners.jpg');
+width:100%;
+height:100%;
+}
+
+div.opacity{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+input.continue{
+position:absolute;
+background:grey;
+color:white;
+width:10%;
+height:5%;
+border-radius:5px;
+top:4;
+right:4;
+text-weight:bold;
+}
+
+input.continue:hover{
+color:black;
+background:white;
+}
+
+div.typical{
+border:3px groove white;
+position:absolute;
+text-align:center;
+top:30%;
+left:30%;
+width:15%;
+height:45%;
+background:#2fa68e;
+border-radius:10px;
+cursor:pointer;
+}
+
+div.custom{
+border:3px groove white;
+position:absolute;
+text-align:center;
+top:30%;
+left:60%;
+width:15%;
+height:45%;
+background:#2fa68e;
+border-radius:10px;
+cursor:pointer;
+}
+a{
+color:black;
+text-decoration:none;
+}
+
+</style>
+
+
+<div class="back">
+<div class="opacity"></div>
+</div>
+<a href="http://192.168.1.28/menu.html"><input type="button" class="continue" value="continue-"/></a>
+
+<div class="typical" onclick="typical()">
+<br /><br /><br /><h1>Typical Install</h1>
+</div>
+
+<div class="custom" onclick="custom()">
+<br /><br /><br /><h1>Custom Install</h1>
+</div>
+
+</html>
+
