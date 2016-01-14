@@ -11,7 +11,7 @@ data=cgi.FormContent()
 username=data['username'][0]
 password=data['password'][0]
 
-if username == "mohit" and password == "redhat":
+if username == "vaishali" and password == "vaishali20":
 	print "location: http://192.168.1.28/Installation.html"
 	print
 else:
